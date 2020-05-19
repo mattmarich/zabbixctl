@@ -5,7 +5,6 @@ import (
 	"os"
 	"strings"
 	"text/tabwriter"
-
 	"github.com/reconquest/karma-go"
 )
 
@@ -87,11 +86,9 @@ func handleTriggers(
 		fmt.Fprintf(
 			table,
 			"%s\t%s\t%s\t%s\t%s\t%s\t%s",
-			trigger.LastEvent.ID, trigger.DateTime(),
-			trigger.Severity(),
-			trigger.StatusProblem(),
-			trigger.StatusAcknowledge(),
-			trigger.GetHostName(),
+			trigger.DateTime(), " - ",
+			trigger.Severity(), " - ",
+			trigger.GetHostName(), " - ",
 			trigger.Description,
 		)
 

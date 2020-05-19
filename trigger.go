@@ -62,7 +62,7 @@ func (trigger *Trigger) Severity() Severity {
 }
 
 func (trigger *Trigger) DateTime() string {
-	return trigger.date().Format("2006-01-02 15:04:05")
+	return trigger.date().Format("01/02 15:04:05")
 }
 
 func (trigger *Trigger) Age() string {
